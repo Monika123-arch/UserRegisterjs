@@ -1,10 +1,9 @@
-//UC1
-const prompt = require('prompt-sync')({sigint: true}); //user input
-const pattern = require('./constant')
+const prompt = require('prompt-sync')({sigint: true}); 
 var regPattern;
 let namePattern = "^[A-Z]{1}[a-z]{3,}";
+let emailReg = "^[a-zA-Z0-9_.]+@[a-zA-Z.a-zA-Z{2,}.a-zA-Z{2,}]+$";
 
-validation = function(data,pattern){          
+validation = function(data,pattern){
     regPattern = new RegExp(pattern);
     result = regPattern.test(data);
     if(result == true){
@@ -16,7 +15,8 @@ validation = function(data,pattern){
     }
 }
 
-let getData = function(string, pattern){                 //getData=function
+
+let getData = function(string, pattern){
     let readData = prompt(string);
     let result = validation(readData,pattern);
   
@@ -34,5 +34,7 @@ let getData = function(string, pattern){                 //getData=function
 }
 
 getData('Enter the first name:',namePattern);
-console.log('welcome User Registration problem');
+getData('Enter the last name:',namePattern);
+getData('Enter the email:',emailReg);
+
 
