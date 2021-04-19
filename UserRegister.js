@@ -3,7 +3,7 @@ var regPattern;
 let namePattern = "^[A-Z]{1}[a-z]{3,}";
 let emailReg = "^[a-zA-Z0-9_.]+@[a-zA-Z.a-zA-Z{2,}.a-zA-Z{2,}]+$";
 let mobileReg = "^[9][1][ ][6-9]{1}[0-9]{9}$";
-let passwordReg = "^(?=.*[A-Z])[A-Za-z]{8,}$";
+let passwordReg = "(?=.*[A-Z])[A-Z a-z 0-9]{8,}$";
 
 
 validation = function(data,pattern){
