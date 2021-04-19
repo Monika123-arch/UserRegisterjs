@@ -2,6 +2,7 @@ const prompt = require('prompt-sync')({sigint: true});
 var regPattern;
 let namePattern = "^[A-Z]{1}[a-z]{3,}";
 let emailReg = "^[a-zA-Z0-9_.]+@[a-zA-Z.a-zA-Z{2,}.a-zA-Z{2,}]+$";
+let mobileReg = "^[9][1][ ][6-9]{1}[0-9]{9}$";
 
 validation = function(data,pattern){
     regPattern = new RegExp(pattern);
@@ -36,5 +37,7 @@ let getData = function(string, pattern){
 getData('Enter the first name:',namePattern);
 getData('Enter the last name:',namePattern);
 getData('Enter the email:',emailReg);
+getData('Enter the mobile no.:',mobileReg);
+
 
 
